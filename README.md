@@ -50,5 +50,5 @@ You'll need to create a upload preset in cloudinary.  I belive the following opt
 
 There is still work to be done.  Pull requests welcome.
 
--[ ] Improve handling of video, image, and raw upload types.
--[ ] Check that public_id is checked using the signature.
+- [ ] Improve handling of video, image, and raw upload types.
+- [ ] Check that public_id is checked using the signature.
