@@ -1,3 +1,5 @@
+import Cloudinary from 'cloudinary';
+
 Slingshot.Cloudinary = {
   directiveMatch: {
     CloudinaryCloudName: String,
@@ -46,14 +48,12 @@ Slingshot.Cloudinary = {
     );
 
     const type = this.resourceType(file.type);
-    console.log('type',type, file.type);
 
     const retVal = {
       upload: cloudinarySign.form_attrs.action,
       download: `http://res.cloudinary.com/${CloudinaryCloudName}/${type}/upload/${publicId}`,
       postData,
     };
-    console.log(retVal);
 
     return retVal;
   },
