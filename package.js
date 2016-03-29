@@ -1,6 +1,6 @@
 Package.describe({
   name: 'jimmiebtlr:slingshot-cloudinary',
-  version: '0.0.4',
+  version: '0.0.5',
   summary: 'Cloudinary storage implementation for edgee:slingshot.',
   git: 'https://github.com/jimmiebtlr/meteor-slingshot-cloudinary',
   documentation: 'README.md'
