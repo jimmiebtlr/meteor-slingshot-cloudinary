@@ -23,7 +23,7 @@ Slingshot.Cloudinary = {
 
   isVideo(type) {
     return _.contains(
-      _.map(Cloudinary.DEFAULT_VIDEO_SOURCE_TYPES,(defaultType) => { return `video/${defaultType}`; }),
+      ['video/mp4'],
       type
     );
   },
