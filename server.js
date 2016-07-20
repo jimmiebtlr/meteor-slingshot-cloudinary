@@ -18,7 +18,7 @@ Slingshot.Cloudinary = {
   }),
 
   isImage(mime) {
-    return _.contains(['image/jpeg','image/jpg', 'image/png', 'image/svg'], mime);
+    return _.contains(['image/jpeg','image/jpg', 'image/png', 'image/svg', 'application/pdf'], mime);
   },
 
   isVideo(type) {

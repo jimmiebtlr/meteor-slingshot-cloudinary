@@ -6,7 +6,7 @@ ecmascript@0.4.3
 ecmascript-runtime@0.2.10
 edgee:slingshot@0.7.1
 ejson@1.0.11
-jimmiebtlr:slingshot-cloudinary@0.0.5
+jimmiebtlr:slingshot-cloudinary@0.0.6
 meteor@1.1.14
 modules@0.6.1
 modules-runtime@0.6.3
