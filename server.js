@@ -8,6 +8,9 @@ Slingshot.Cloudinary = {
     CloudinaryPreset: String,
 
     key: Match.OneOf(String, Function),
+
+    tags: Match.Optional(Match.OneOf(String, [String])),
+    folder: Match.Optional(String),
   },
 
   directiveDefault: Object.assign({}, {
@@ -71,6 +74,10 @@ Slingshot.Cloudinary = {
       // isn't in this lib.
       resource_type: this.resourceType(file.type),
     });
+
+    // Assign optional cloudinary options
+    if (_.has(directive, 'tags')) options.tags = directive.tags;
+    if (_.has(directive, 'folder')) options.folder = directive.folder;
 
     const signature = Cloudinary.uploader.direct_upload('', options);
 
