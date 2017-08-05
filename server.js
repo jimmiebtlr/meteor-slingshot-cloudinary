@@ -39,9 +39,9 @@ Slingshot.Cloudinary = {
         : 'raw';
   },
 
-  upload: function upload(method, directive, file) {
+  upload: function upload(method, directive, file, meta) {
     const { CloudinaryCloudName } = directive;
-    const publicId = directive.key();
+    const publicId = directive.key(method, file, meta);
 
     // Cloudinary's node lib supplies most of what we need.
     const cloudinarySign = this.cloudinarySign(publicId, directive, file);
