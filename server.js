@@ -20,23 +20,14 @@ Slingshot.Cloudinary = {
     CloudinaryPreset: Meteor.settings.CloudinaryPreset,
   }),
 
-  isImage(mime) {
-    return _.contains(['image/jpeg','image/jpg', 'image/png', 'image/svg', 'application/pdf'], mime);
-  },
+  // Determined by mime types 'image/*' and 'video/*'
+  resourceType(mimeType) {
+    const mimeSplit = mimeType.split('/');
 
-  isVideo(type) {
-    return _.contains(
-      ['video/mp4'],
-      type
-    );
-  },
-
-  resourceType(type) {
-    return this.isImage(type)
-      ? 'image'
-      : this.isVideo(type)
-        ? 'video'
-        : 'raw';
+    if (_.contains(['image', 'video'], mimeSplit[0]))
+      return mimeSplit[0];
+    else
+      return 'raw';
   },
 
   upload: function upload(method, directive, file, meta) {
